@@ -8,28 +8,27 @@ void main() {
 
 class RecipeApp extends StatelessWidget {
   const RecipeApp({Key? key}) : super(key: key);
-  static const MaterialColor white = MaterialColor(0xFFFFFFFF, <int, Color>{
-    50: Color(0xFFFFFFFF),
-    100: Color(0xFFFFFFFF),
-    200: Color(0xFFFFFFFF),
-    300: Color(0xFFFFFFFF),
-    400: Color(0xFFFFFFFF),
-    500: Color(0xFFFFFFFF),
-    600: Color(0xFFFFFFFF),
-    700: Color(0xFFFFFFFF),
-    800: Color(0xFFFFFFFF),
-    900: Color(0xFFFFFFFF),
+  static const MaterialColor softPink = MaterialColor(0xFFFFC0CB, <int, Color>{
+    50: Color(0xFFFFC0CB),
+    100: Color(0xFFFFC0CB),
+    200: Color(0xFFFFC0CB),
+    300: Color(0xFFFFC0CB),
+    400: Color(0xFFFFC0CB),
+    500: Color(0xFFFFC0CB),
+    600: Color(0xFFFFC0CB),
+    700: Color(0xFFFFC0CB),
+    800: Color(0xFFFFC0CB),
+    900: Color(0xFFFFC0CB),
   });
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Recipe Calculator',
+      title: 'Resep Makanan Khas Jawa Timur',
       theme: ThemeData(
-        primarySwatch: white,
+        primarySwatch: softPink, // Menggunakan warna soft yellow
       ),
-      home: const MyHomePage(title: 'Recipe Calculator'),
+      home: const MyHomePage(title: 'Resep Makanan Khas Jawa Timur'),
     );
   }
 }
@@ -49,7 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(widget.title),
+        backgroundColor: const Color.fromARGB(255, 255, 132, 173),
       ),
+      backgroundColor: Color.fromARGB(255, 255, 128, 170),
       body: SafeArea(
         child: ListView.builder(
           itemCount: Recipe.samples.length,
@@ -80,6 +81,7 @@ Widget buildRecipeCard(Recipe recipe) {
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(10.0),
     ),
+    color: const Color.fromARGB(255, 255, 218, 231),
     child: Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
@@ -94,6 +96,7 @@ Widget buildRecipeCard(Recipe recipe) {
               fontSize: 20.0,
               fontWeight: FontWeight.w700,
               fontFamily: 'Palationo',
+              color: Color.fromARGB(255, 0, 0, 0),
             ),
           ),
         ],

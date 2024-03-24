@@ -21,6 +21,7 @@ class _RecipeDetailState extends State<RecipeDetail> {
       appBar: AppBar(
         title: Text(widget.recipe.label),
       ),
+      backgroundColor: Colors.pink[50],
       body: SafeArea(
           child: Column(
         children: [
@@ -60,7 +61,7 @@ class _RecipeDetailState extends State<RecipeDetail> {
                 _sliderVal = newValue.round();
               });
             },
-            activeColor: Colors.green,
+            activeColor: Color.fromARGB(255, 231, 49, 122),
             inactiveColor: Colors.black,
           ),
         ],
